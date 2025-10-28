@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tak-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav container-narrow">
+            <h1 class="brand">Tic-Tak-Toe</h1>
+            <div class="nav-actions">
+                <button class="btn ghost" onclick="document.getElementById('game-card').scrollIntoView({behavior:'smooth'})">Play</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-inner container-narrow">
+                <h2 class="hero-title">Play Tic-Tak-Toe — Fast, Clean & Touch-friendly</h2>
+                <p class="hero-sub">A simple two-player game with a minimal, modern interface. Tap to play on phones or click on desktop.</p>
+                <div class="hero-ctas">
+                    <a class="btn primary" href="#game-card">Play Now</a>
+                    <button class="btn" onclick="resetGame()">New Game</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="game-card" class="game-section container-narrow">
+            <div class="game-card">
+                <div id="status" class="status" aria-live="polite"></div>
+                <div class="grid" role="grid" aria-label="Tic Tac Toe board">
+                    <div onclick="handleClick(this)" id="0" class="col" role="gridcell" tabindex="0"></div>
+                    <div onclick="handleClick(this)" id="1" class="col" role="gridcell" tabindex="0"></div>
+                    <div onclick="handleClick(this)" id="2" class="col" role="gridcell" tabindex="0"></div>
+                    <div onclick="handleClick(this)" id="3" class="col" role="gridcell" tabindex="0"></div>
+                    <div onclick="handleClick(this)" id="4" class="col" role="gridcell" tabindex="0"></div>
+                    <div onclick="handleClick(this)" id="5" class="col" role="gridcell" tabindex="0"></div>
+                    <div onclick="handleClick(this)" id="6" class="col" role="gridcell" tabindex="0"></div>
+                    <div onclick="handleClick(this)" id="7" class="col" role="gridcell" tabindex="0"></div>
+                    <div onclick="handleClick(this)" id="8" class="col" role="gridcell" tabindex="0"></div>
+                </div>
+                <div class="card-actions">
+                    <button id="reset" class="btn" onclick="resetGame()">Reset</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    
+</body>
+</html>
